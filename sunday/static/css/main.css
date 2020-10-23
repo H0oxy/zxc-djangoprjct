@@ -1,3 +1,7 @@
+*{
+    font-family: Comic Sans MS;
+}
+
 body {
     background-color: #000000;
 }
@@ -44,17 +48,6 @@ body {
     margin-left: 660px;
 }
 
-/*.block-type{*/
-/*    background: url(static\css\img\mgrass.jpg) repeat-x #80376f;*/
-/*    width: 1500px;*/
-/*    height: 100px;*/
-/*    margin-top: 16%;*/
-/*}*/
-
-/*.grass1{*/
-/*    height: 100%;*/
-/*    background-repeat: repeat;*/
-/*}*/
 
 .main-menu ul {
     list-style-type: none;
@@ -83,18 +76,32 @@ body {
 
 }
 
-*{
-    font-family: Comic Sans MS;
-}
-.catelog-menu li{
-    margin-left: 10px;
+.catelog-menu {
+    width: 205px;
+    height: 105px;
+    float: bottom;
+    margin-top: 50px;
+    margin-left: 660px;
 }
 
-.catelog-menu{
-    float: left;
-    margin-top: 25px;
-    margin-left: 580px;
-    background-color: snow;
-    width: 400px;
-    height: 200px;
+
+
+.catelog-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #fc5b74;
+}
+
+.catelog-menu li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.catelog-menu li a:hover {
+    background-color: #830e68;
+    color: lightpink;
 }
