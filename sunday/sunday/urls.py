@@ -18,9 +18,11 @@ from django.contrib import admin
 from django.urls import path
 
 urlpatterns = [
-    path('', mainapp.index),
-    path('catalog/', mainapp.catalog),
-    path('basket/', mainapp.basket),
-    path('secret/', mainapp.secret),
+    path('', mainapp.index, name='index'),
+    path('catalog/', mainapp.catalog, name='catalog'),
+    path('catalog/category/<int:pk>/', mainapp.catalog_page, name='catalog_page'),
+    path('basket/', mainapp.basket, name='basket'),
+    path('secret/', mainapp.secret, name='secret'),
+
     path('admin/', admin.site.urls),
 ]

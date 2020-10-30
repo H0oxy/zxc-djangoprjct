@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from mainapp.models import Category
+from mainapp.models import Category, Board
 
 
 def index(request):
@@ -23,3 +23,11 @@ def basket(request):
 def secret(request):
     return render(request, 'mainapp/secret.html')
 
+
+def catalog_page(request, pk):
+    board = Category.objects.filter(category_id=pk)
+    context = {
+        'boards': board,
+        'page_title': 'страница каталога'
+    }
+    return render(request, 'mainapp/catalog_page.html', context)
