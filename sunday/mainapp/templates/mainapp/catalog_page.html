@@ -18,7 +18,9 @@
             <ul>
                 <li>
                     <a href="{% url 'catalog' item.pk %}">
-{#                    <a href="#"> {{ item }} </a>#}
+                </li>
+                <li>
+                    {% url 'auth:login' %}
                 </li>
             </ul>
         {% endfor %}

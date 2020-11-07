@@ -16,6 +16,7 @@ Including another URLconf
 import mainapp.views as mainapp
 from django.contrib import admin
 from django.urls import path
+from django.urls import path, include
 
 urlpatterns = [
     path('', mainapp.index, name='index'),
@@ -23,6 +24,8 @@ urlpatterns = [
     path('catalog/category/<int:pk>/', mainapp.catalog_page, name='catalog_page'),
     path('basket/', mainapp.basket, name='basket'),
     path('secret/', mainapp.secret, name='secret'),
+    path('auth/', include('authapp.urls', namespace='auth')),
+
 
     path('admin/', admin.site.urls),
 ]
