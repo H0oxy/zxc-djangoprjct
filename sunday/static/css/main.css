@@ -105,3 +105,26 @@ body {
     background-color: #830e68;
     color: lightpink;
 }
+
+.login-form {
+    margin: 5vh auto;
+    width: 50%;
+    color: black;
+    background-color: lightpink;
+    border-radius: 20px;
+}
+
+.form-title {
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    color: black;
+}
+
+.register-form {
+    margin: 5vh auto;
+    width: 40%;
+    color: black;
+    background-color: lightpink;
+    border-radius: 20px;
+}

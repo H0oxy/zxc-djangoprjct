@@ -1,14 +1,14 @@
 {% extends 'authapp/base.html' %}
 
 {% block content %}
-    <div class="login-form">
-        <div class="form-title">Вход в систему</div>
-        <form class="login-form" method="post">
+    <div class="register-form">
+        <div class="form-title">Register in system</div>
+        <form class="register-form" method="post", enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.as_p }}
             <input type="submit"
                    class="btn btn-success form-control"
-                   value="login">
+                   value="register">
         </form>
     </div>
 {% endblock %}
