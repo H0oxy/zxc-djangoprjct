@@ -2,15 +2,17 @@
 
 {% block content %}
 
-<div class="main-block">
-    <div class="welcometext">
-        <h2 class="madetext">Thank you for watching</h2>
-    </div>
-    <div class="kartinkagachi">
+    <div class="main-block">
+        <div class="welcometext">
+            <h2 class="madetext">Thank you for watching</h2>
+        </div>
 
-        <p><a href="/secret/"><img src="\static\css\img\milosdance.gif" class="welcomegachi"></a></p>
+        <div class="kartinkagachi">
 
+            <p><a href="/secret/"><img src="\static\css\img\milosdance.gif" class="welcomegachi"></a></p>
+
+        </div>
     </div>
-</div>
+        <h2>Ваша корзина, {{ user.username|capfirst }}</h2>
 
 {% endblock %}

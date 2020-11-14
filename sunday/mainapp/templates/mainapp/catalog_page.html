@@ -20,6 +20,9 @@
                     <a href="{% url 'catalog' item.pk %}">
                 </li>
             </ul>
+            <a href="{% url 'basket:add' course.id %}">
+                Записаться
+            </a>
         {% endfor %}
     </div>
 {% endblock %}

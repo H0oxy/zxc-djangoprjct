@@ -30,6 +30,11 @@
             <a href="/basket/">Thx</a>
         </li>
         <li>
+            <a href="{% url 'basket' %}">Корзина</a>	            <a href="{% url 'basket:index' %}">Корзина</a>
+        </li>
+
+
+        <li>
             {% if user.is_authenticated%}
                 <a href="{% url 'auth:logout' %}">Logout</a>
             {% else %}
