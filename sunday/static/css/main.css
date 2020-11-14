@@ -66,6 +66,7 @@ body {
 
 .main-menu li a:hover {
     background-color: #80376f;
+    transition: 0.3s;
     color: lightpink;
 }
 
@@ -103,6 +104,7 @@ body {
 
 .catelog-menu li a:hover {
     background-color: #830e68;
+    transition: 0.3s;
     color: lightpink;
 }
 
@@ -127,4 +129,33 @@ body {
     color: black;
     background-color: lightpink;
     border-radius: 20px;
+}
+
+.auth-menu {
+    display: inline-block;
+    width: 805px;
+    height: 105px;
+    margin-top: 10px;
+    margin-left: 680px;
+}
+
+.auth-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: lightpink;
+}
+
+.auth-menu li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.auth-menu li a:hover {
+    background-color: #80376f;
+    transition: 0.3s;
+    color: lightpink;
 }

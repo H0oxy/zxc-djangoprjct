@@ -22,9 +22,9 @@ urlpatterns = [
     path('', mainapp.index, name='index'),
     path('catalog/', mainapp.catalog, name='catalog'),
     path('catalog/category/<int:pk>/', mainapp.catalog_page, name='catalog_page'),
-    path('basket/', mainapp.basket, name='basket'),
     path('secret/', mainapp.secret, name='secret'),
     path('auth/', include('authapp.urls', namespace='auth')),
+    path('basket/', include('basketapp.urls', name='basket')),
 
 
     path('admin/', admin.site.urls),
