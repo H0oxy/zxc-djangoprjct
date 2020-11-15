@@ -1,7 +1,10 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
+from django.urls import reverse
+
 
 from basketapp.models import BoardBasket
+from mainapp.models import Board
 
 
 
@@ -12,21 +15,22 @@ def index(request):
         'object_list': items,
     }
 
-
     return render(request, 'basketapp/basket.html', context)
 
 
+
 def add(request, board_id):
-    # course = Board.objects.get(pk=course_id)
+    board = Board.objects.get(pk=board_id)
     BoardBasket.objects.get_or_create(
         user=request.user,
-        course_id=board_id
+        # course_id=course_id
+        course=board
     )
-    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
-    # return HttpResponseRedirect(
-    #     reverse('mainapp:catalog_section',
-    #             kwargs={'category_pk': course.category_id})
-    # )
+    # return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+    return HttpResponseRedirect(
+        reverse('mainapp:catalog_section',
+                kwargs={'category_pk': board.category_id})
+    )
 
 
 def remove(request, board_basket_id):

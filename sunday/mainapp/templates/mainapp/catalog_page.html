@@ -20,7 +20,7 @@
                     <a href="{% url 'catalog' item.pk %}">
                 </li>
             </ul>
-            <a href="{% url 'basket:add' item.id %}">
+            <a href="{% url 'basket:add' board.id %}">
                 Записаться
             </a>
         {% endfor %}

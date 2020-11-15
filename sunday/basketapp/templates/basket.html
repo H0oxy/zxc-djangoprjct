@@ -20,7 +20,10 @@
         {% for item in object_list %}
             <li>
                 {{ item.to_html|safe }}
-                <a href="{% url 'basket:remove' item.pk %}">удалить</a>
+                <a href="{% url 'basket:remove' item.pk %}"
+                   class="btn btn-danger">
+                    удалить
+                </a>
             </li>
         {% endfor %}
     </ul>
