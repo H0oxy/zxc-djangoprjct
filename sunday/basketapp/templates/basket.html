@@ -13,6 +13,15 @@
 
         </div>
     </div>
-        <h2>Ваша корзина, {{ user.username|capfirst }}</h2>
-
+    <div class="basket">
+        <h2>Ваши заказы {{ user.username|capfirst }}</h2>
+    </div>
+    <ul>
+        {% for item in object_list %}
+            <li>
+                {{ item.to_html|safe }}
+                <a href="{% url 'basket:remove' item.pk %}">удалить</a>
+            </li>
+        {% endfor %}
+    </ul>
 {% endblock %}

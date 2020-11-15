@@ -7,7 +7,13 @@ from basketapp.models import BoardBasket
 
 
 def index(request):
-    return render(request, 'basketapp/basket.html')
+    items = BoardBasket.objects.filter(user=request.user)
+    context = {
+        'object_list': items,
+    }
+
+
+    return render(request, 'basketapp/basket.html', context)
 
 
 def add(request, board_id):
@@ -21,3 +27,9 @@ def add(request, board_id):
     #     reverse('mainapp:catalog_section',
     #             kwargs={'category_pk': course.category_id})
     # )
+
+
+def remove(request, board_basket_id):
+    item = BoardBasket.objects.get(id=board_basket_id)
+    item.delete()
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
