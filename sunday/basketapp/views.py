@@ -24,7 +24,7 @@ def add(request, board_id):
     BoardBasket.objects.get_or_create(
         user=request.user,
         # course_id=course_id
-        course=board
+        board=board
     )
     # return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
     return HttpResponseRedirect(
