@@ -1,0 +1,18 @@
+{% extends 'sponsorapp/base.html' %}
+
+{% block content %}
+
+<div class="main-block">
+    <h1 style="color: white;">Sponsors:</h1>
+    <ul>
+        {% for item in sponsors %}
+            <li>
+                <a href="#">{{ item }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+</div>
+
+{% endblock %}
+

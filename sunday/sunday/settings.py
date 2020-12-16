@@ -40,6 +40,8 @@ INSTALLED_APPS = [
 
     'mainapp',
     'authapp',
+    'sponsorapp',
+
 ]
 
 MIDDLEWARE = [
