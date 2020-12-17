@@ -1,0 +1,18 @@
+{% extends 'computerapp/base.html' %}
+
+{% block content %}
+
+<div class="main-block">
+    <h1 style="color: white;">Computers:</h1>
+    <ul>
+        {% for item in computers %}
+            <li>
+                <a href="#">{{ item }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+</div>
+
+{% endblock %}
+
