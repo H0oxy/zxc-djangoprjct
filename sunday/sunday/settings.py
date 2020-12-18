@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'authapp',
     'sponsorapp',
     'computerapp',
+    'weekapp',
 
 ]
 

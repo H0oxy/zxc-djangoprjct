@@ -1,0 +1,18 @@
+{% extends 'weekapp/base.html' %}
+
+{% block content %}
+
+<div class="main-block">
+    <h1 style="color: white;">Weeks:</h1>
+    <ul>
+        {% for item in weeks %}
+            <li>
+                <a href="#">{{ item }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+</div>
+
+{% endblock %}
+
