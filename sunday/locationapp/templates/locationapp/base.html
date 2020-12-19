@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>{{ page_title|default:"pepe"|capfirst }}</title>
+    <title>{{ page_title|default:"Location"|capfirst }}</title>
     {% block css %}
         <link rel="stylesheet" href="\static\css\main.css\">
     {% endblock %}
@@ -31,8 +31,11 @@
         </li>
         <li>
             <a href="{% url 'sponsor:sponsor' %}">Sponsors</a>
-            <a href="{% url 'computer:computer' %}">Computers</a>
+        </li>
+        <li>
             <a href="{% url 'week:week' %}">Weeks</a>
+        </li>
+        <li>
             <a href="{% url 'location:location' %}">Locations</a>
         </li>
         <li>

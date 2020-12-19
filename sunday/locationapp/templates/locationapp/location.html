@@ -1,0 +1,18 @@
+{% extends 'locationapp/base.html' %}
+
+{% block content %}
+
+<div class="main-block">
+    <h1 style="color: white;">locations:</h1>
+    <ul>
+        {% for item in locations %}
+            <li>
+                <a href="#">{{ item }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+</div>
+
+{% endblock %}
+

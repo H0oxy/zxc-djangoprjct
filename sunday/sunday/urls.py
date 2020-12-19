@@ -28,6 +28,7 @@ urlpatterns = [
     path('sponsor/', include('sponsorapp.urls', namespace='sponsor')),
     path('computer/', include('computerapp.urls', namespace='computer')),
     path('week/', include('weekapp.urls', namespace='week')),
+    path('location/', include('locationapp.urls', namespace='location')),
 
 
     path('admin/', admin.site.urls),
